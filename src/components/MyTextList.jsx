@@ -22,16 +22,19 @@ export function MyTextList() {
     {
       title: "Título",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    }
+    },
   ];
 
   return (
-    <div className={styles.container}>
-      {texts.map((item, index) => (
-        <MyText title={`${index + 1}. ${item.title}`}>
+    <div>
+      <h1 className={styles.title}>Meus textos</h1>
+      <div className={styles.container}>
+        {texts.map((item, index) => (
+          <MyText key={index} title={`${index + 1}. ${item.title}`}>
             {item.text}
-        </MyText>
-      ))}
+          </MyText>
+        ))}
+      </div>
     </div>
   );
 }

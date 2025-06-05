@@ -11,4 +11,22 @@
     /*EIXO VERTIVAL - Cross Axis*/
     align-items: center;
     align-content: center;
+
+    @media (max-width: 768px) {
+        flex-flow: column nowrap;
+    }
+}
+
+.title {
+    font-size: 10rem;
+    font-weight: bolder;
+    text-align: center;
+
+    @media (max-width: 1200px) {
+        font-size: 6rem;
+
+        @media (max-width: 768px) {
+            font-size: 3rem;
+        }
+    }
 }
