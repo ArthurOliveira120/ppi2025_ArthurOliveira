@@ -1,0 +1,32 @@
+.container {
+  display: grid;
+  padding: 3rem;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-rows: repeat(auto-fit, min-content);
+  background-color: var(--primary-light);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: auto;
+  background-color: var(--primary-dark);
+  color: var(--primary-contrast-light);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.card .imageContainer {
+  margin-bottom: 1rem;
+}
+
+.card img {
+  border-radius: 1rem;
+}
