@@ -1,18 +1,44 @@
 :root {
-  --primary: #02211b;
-  --primary-light: #033f35;
-  --primary-dark: #01110d;
-  --primary-contrast-light: #fff;
-  --primary-contrast-dark: #111;
-  
-  --gray-100: #f8f9fa;
-  --gray-200: #e9ecef;
-  --gray-300: #dee2e6;
-  --gray-400: #ced4da;
-  --gray-500: #adb5bd;
-  --gray-600: #6c757d;
-  --gray-700: #495057;
-  --gray-800: #343a40;
-  --gray-900: #212529;
-}
+  /* Cores principais */
+  --primary: #0b132bff;           /* Oxford Blue - cor principal */
+  --primary-light: #2c3a67ff;     /* versão clara */
+  --primary-dark: #070d1aff;      /* versão escura */
 
+  --secondary: #1c2541ff;         /* Space Cadet - secundária */
+  --secondary-light: #495480ff;
+  --secondary-dark: #121a2bff;
+
+  --accent: #6fffe9ff;            /* Fluorescent Cyan - destaque */
+  --accent-light: #bafff9ff;
+  --accent-dark: #3fd4ccff;
+
+  /* Contrastes para texto e fundo */
+  --background-light: #f5f5f5;    /* fundo claro geral */
+  --background-dark: #121a2b;     /* fundo escuro para seções */
+  --surface: #1c2541ff;            /* superfície / cards fundo */
+
+  --text-primary: #e0e0e0;        /* texto claro principal */
+  --text-secondary: #a0a0a0;      /* texto secundário */
+  --text-dark: #121a2b;           /* texto escuro */
+
+  /* Botões */
+  --button-bg-primary: var(--primary);
+  --button-bg-primary-hover: var(--primary-light);
+  --button-bg-secondary: var(--secondary);
+  --button-bg-secondary-hover: var(--secondary-light);
+  --button-text: var(--background-light);
+
+  /* Estados */
+  --hover-bg: var(--primary-light);
+  --focus-outline: #00ffe7ff;
+  --error: #ff4c4cff;
+  --success: #5bc0beff;
+
+  /* Bordas */
+  --border-light: #d0d0d0;
+  --border-dark: #3a506bff;
+
+  /* Sombra */
+  --shadow-light: rgba(44, 58, 103, 0.3);
+  --shadow-dark: rgba(7, 13, 26, 0.8);
+}
