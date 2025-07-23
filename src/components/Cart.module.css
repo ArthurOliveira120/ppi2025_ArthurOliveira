@@ -1,0 +1,128 @@
+body {
+    height: 100vh;
+}
+
+.head {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.75rem;
+}
+
+.head p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 2rem;
+}
+
+.head button {
+    background-color: var(--button-bg-secondary);
+    color: var(--button-text);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.prodList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: var(--background-dark);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.prodList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--surface);
+    border-radius: 0.5rem;
+}
+
+.prodImgContainer img {
+    width: 100px;
+    height: auto;
+}
+
+.prodInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prodInfoContainer h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.50rem;
+}
+
+.prodInfoContainer p {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.prodQtyContainer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.prodQtyContainer span {
+    font-size: 1.25rem;
+}
+
+.qtyProduct {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--button-bg-primary-hover);
+}
+
+.qtyProduct button {
+    background-color: var(--button-bg-secondary-hover);
+    color: var(--button-text);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 0.25rem;
+}
+
+.qtyProduct span {
+    font-size: 1.25rem;
+    margin: 0 1rem;
+}
+
+.totalPriceContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.totalPriceContainer span {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}

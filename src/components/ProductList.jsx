@@ -6,7 +6,7 @@ import { CircularProgress } from "@mui/material";
 
 import { Product } from "./Product";
 
-export function ProductList() {
+export function ProductList({ cart, addToCart, removeFromCart }) {
   var category = "smartphones";
   var limit = 10;
   var apiUrl = `https://dummyjson.com/products/category/${category}?limit=${limit}&select=id,thumbnail,title,price,description`;
@@ -33,11 +33,15 @@ export function ProductList() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.mainTitle}>TJA Megastore</h1>
-      
       <div className={styles.productsList}>
         {products.map((prod) => (
-          <Product key={prod.id} product={prod} />
+          <Product
+            key={prod.id}
+            product={prod}
+            qty={cart.find((p) => p.id === prod.id)?.qty || 0}
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
+          />
         ))}
       </div>
 
