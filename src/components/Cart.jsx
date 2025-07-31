@@ -1,13 +1,18 @@
 import styles from "./Cart.module.css";
 
-export function Cart({ cart, addToCart, removeFromCart, removeAllFromCart }) {
+import { useContext } from "react";
+import { CartContext } from "../service/CartContext";
+
+export function Cart() {
+  const { cart, addToCart, removeFromCart, clearCart } = useContext(CartContext);
+
   return (
     <div className={styles.cart}>
       <div className={styles.head}>
         <p>Shopping Cart</p>
         <button
           className={styles.removeAll}
-          onClick={() => removeAllFromCart()}
+          onClick={() => clearCart()}
         >
           Remove all products
         </button>

@@ -17,7 +17,7 @@
 .productCard:hover {
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    box-shadow: 0 4px 8px var(--shadow-light, 1);
+    box-shadow: 0 2px 20px var(--secondary-light, 1);
 }
 
 .productCard:hover .addButton {
@@ -60,6 +60,11 @@
     font-size: 1rem;
     margin-top: 1.5rem;
     opacity: 0;
+    transition: background-color 0.3s ease, opacity 0.2s ease-in-out;
+}
+
+.productCard:hover .addButton:hover {
+    background-color: var(--button-bg-secondary-hover);
 }
 
 .qtyProduct {
