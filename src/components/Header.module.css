@@ -24,6 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   padding: 1rem;
   background-color: var(--surface);
   border-radius: 0.75rem;
@@ -32,6 +33,25 @@
 }
 
 .cartInfo:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px var(--shadow-dark, 1);
+}
+
+.secContainer {
+  display: flex;
+  align-items: center;
+  background-color: var(--surface);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px var(--shadow-dark, 1);
+  padding: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.secContainer p {
+  padding-left: 0.75rem;
+}
+
+.secContainer:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 8px var(--shadow-dark, 1);
 }

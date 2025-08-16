@@ -2,7 +2,7 @@ import styles from "./ProductList.module.css";
 
 import { useContext, useEffect, useRef, useState } from "react";
 import { CircularProgress } from "@mui/material";
-import { Product } from "./Product";
+import { Product } from "../components/Product";
 import { CartContext } from "../service/CartContext";
 
 export function ProductList() {

@@ -18,11 +18,9 @@ export function Product({ product }) {
         <p className={styles.productDesc}>{product.description}</p>
       </div>
 
-      <Link to="/cart">
-        <button className={styles.addButton} onClick={() => addToCart(product)}>
-          Add to Cart
-        </button>
-      </Link>
+      <button className={styles.addButton} onClick={() => addToCart(product)}>
+        Add to Cart
+      </button>
     </div>
   );
 }
