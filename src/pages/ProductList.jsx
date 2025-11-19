@@ -3,7 +3,7 @@ import styles from "./ProductList.module.css";
 import { useContext, useEffect, useRef, useState } from "react";
 import { CircularProgress } from "@mui/material";
 import { Product } from "../components/Product";
-import { CartContext } from "../service/CartContext";
+import { CartContext } from "../context/CartContext";
 
 export function ProductList() {
   const { products, loading, error } = useContext(CartContext);
@@ -66,7 +66,7 @@ export function ProductList() {
         </div>
       )}
 
-      {error && <p>Error loading products: {error.message}</p>}
+      {error && <p>{error}</p>}
     </div>
   );
 }

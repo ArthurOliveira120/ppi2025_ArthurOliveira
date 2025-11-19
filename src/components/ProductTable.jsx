@@ -1,7 +1,7 @@
 import styles from "./ProductTable.module.css";
 
 import { useState, useEffect, useContext, useRef } from "react";
-import { CartContext } from "../service/CartContext";
+import { CartContext } from "../context/CartContext";
 import { ProductRow } from "./ProductRow";
 
 export function ProductTable() {
@@ -29,16 +29,20 @@ export function ProductTable() {
 
   return (
     <table className={styles.table}>
-      <tr>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Thumbnail</th>
-        <th>Price</th>
-        <th></th>
-      </tr>
-      {filteredProducts.map((prod) => (
-        <ProductRow key={prod.id} product={prod} />
-      ))}
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Thumbnail</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {filteredProducts.map((prod) => (
+          <ProductRow key={prod.id} product={prod} />
+        ))}
+      </tbody>
     </table>
   );
 }

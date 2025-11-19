@@ -1,0 +1,15 @@
+.toggleButton {
+  display: flex;
+  align-items: center;
+  background-color: var(--surface);
+  color: var(--accent);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px var(--shadow-dark, 1);
+  padding: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.toggleButton:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px var(--shadow-dark, 1);
+}

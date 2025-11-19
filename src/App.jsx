@@ -4,29 +4,33 @@ import "./styles/global.css";
 import { Login } from "./pages/Login";
 import { ProductList } from "./pages/ProductList";
 import { Cart } from "./pages/Cart";
-import { SignUp } from "./pages/SignUp";
-import { CartProvider } from "./service/CartContext";
+import { CartProvider } from "./context/CartContext";
+import { SessionProvider } from "./context/SessionContext";
 import { Routes, Route } from "react-router";
 import { Header } from "./components/Header";
-import { ManageProducts } from "./pages/ManageProducts";
 import { UpdateProduct } from "./pages/UpdateProduct";
+import { User } from "./pages/User";
+import { ToastContainer } from "react-toastify";
 
 export default function App() {
   return (
     //React Fragment
     <>
-      <CartProvider>
-        <Header />
-        <Routes>
-          <Route path="/" element={<ProductList />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/manage-products" element={<ManageProducts />} />
-          <Route path="/update-product" element={<UpdateProduct />} />
-          <Route path="/update-product/:id" element={<UpdateProduct />} />
-        </Routes>
-      </CartProvider>
+      <ToastContainer />
+      <SessionProvider>
+        <CartProvider>
+          <Header />
+          <Routes>
+            <Route path="/" element={<ProductList />} />
+            <Route path="/signin" element={<Login value="signin" />} />
+            <Route path="/register" element={<Login value="register" />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/update-product" element={<UpdateProduct />} />
+            <Route path="/update-product/:id" element={<UpdateProduct />} />
+            <Route path="/user" element={<User />} />
+          </Routes>
+        </CartProvider>
+      </SessionProvider>
     </>
   );
 }

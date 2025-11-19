@@ -1,9 +1,9 @@
 import styles from "./UpdateProduct.module.css";
 
 import { useContext, useEffect, useMemo, useState } from "react";
-import { useParams } from "react-router-dom"; // <- importante: react-router-dom
+import { useParams } from "react-router-dom";
 import { InputText } from "../components/InputText";
-import { CartContext } from "../service/CartContext";
+import { CartContext } from "../context/CartContext";
 
 export function UpdateProduct() {
   const { id } = useParams();

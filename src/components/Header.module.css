@@ -20,6 +20,18 @@
   margin-left: 2rem;
 }
 
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.title h1 {
+  margin: 0;
+}
+
 .cartInfo {
   display: flex;
   flex-direction: column;
@@ -29,12 +41,15 @@
   background-color: var(--surface);
   border-radius: 0.75rem;
   box-shadow: 0 2px 4px var(--shadow-dark, 1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease,
+    background-color 0.3s ease, color 0.3s ease;
 }
 
 .cartInfo:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 8px var(--shadow-dark, 1);
+  background-color: var(--accent);
+  color: var(--text-dark);
 }
 
 .secContainer {
@@ -44,7 +59,8 @@
   border-radius: 0.75rem;
   box-shadow: 0 2px 4px var(--shadow-dark, 1);
   padding: 1rem;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease,
+    background-color 0.3s ease, color 0.3s ease;
 }
 
 .secContainer p {
@@ -54,4 +70,17 @@
 .secContainer:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 8px var(--shadow-dark, 1);
+  background-color: var(--accent);
+  color: var(--text-dark);
+}
+
+.welcomeMessage {
+  font-size: 1rem;
+  color: var(--text);
+  text-decoration: none;
+  margin-top: 0.75rem;
+}
+
+.welcomeMessage:hover {
+  text-decoration: underline;
 }

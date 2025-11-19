@@ -1,4 +1,4 @@
-:root {
+:root[data-theme='dark'] {
   --primary: #0b132bff;
   --primary-light: #2c3a67ff;
   --primary-dark: #070d1aff;
@@ -42,4 +42,50 @@
 
   --shadow-light: rgba(44, 58, 103, 0.3);
   --shadow-dark: rgba(7, 13, 26, 0.8);
+}
+
+:root[data-theme='light'] {
+  --primary: #3a506bff;
+  --primary-light: #5c7ca6ff;
+  --primary-dark: #1c2541ff;
+
+  --primary-bg-gradient: linear-gradient(
+    90deg,
+    var(--primary-light) 0%,
+    var(--primary) 50%,
+    var(--primary-dark) 100%
+  );
+
+  --secondary: #b0c4deff;
+  --secondary-light: #d1deecff;
+  --secondary-dark: #8aa3c4ff;
+
+  --accent: #00bfa6ff;
+  --accent-light: #6fffe9ff;
+  --accent-dark: #009e8aff;
+
+  --background-light: #ffffff;
+  --background-dark: #f0f2f5;
+  --surface: #f9fafb;
+
+  --text-primary: #121a2b;
+  --text-secondary: #4a4a4a;
+  --text-dark: #0b132b;
+
+  --button-bg-primary: var(--primary);
+  --button-bg-primary-hover: var(--primary-dark);
+  --button-bg-secondary: var(--secondary);
+  --button-bg-secondary-hover: var(--secondary-dark);
+  --button-text: #ffffff;
+
+  --hover-bg: var(--primary-light);
+  --focus-outline: #00bfa6ff;
+  --error: #e63946ff;
+  --success: #2a9d8fff;
+
+  --border-light: #e0e0e0;
+  --border-dark: #b0c4deff;
+
+  --shadow-light: rgba(58, 80, 107, 0.1);
+  --shadow-dark: rgba(28, 37, 65, 0.2);
 }
