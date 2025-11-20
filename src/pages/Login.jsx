@@ -6,7 +6,7 @@ import { Form } from "@base-ui-components/react/form";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { toast, Bounce } from "react-toastify";
 import { CircularProgress } from "@mui/material";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 export function Login({ value }) {
   // User Context

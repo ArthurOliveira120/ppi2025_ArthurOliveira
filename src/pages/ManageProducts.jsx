@@ -1,7 +1,7 @@
 import styles from "./ManageProducts.module.css";
 
 import { ProductTable } from "../components/ProductTable";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { CirclePlus } from "lucide-react";
 
 export function ManageProducts() {

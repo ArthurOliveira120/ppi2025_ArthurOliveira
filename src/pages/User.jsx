@@ -31,14 +31,13 @@ export function User() {
           <button className={styles.button} onClick={handleSignOut}>
             SIGN OUT
           </button>
+          {session.user.user_metadata.admin && <ManageProducts />}
         </div>
       ) : (
         <div className={styles.container}>
           <h1>User not signed in!</h1>
         </div>
       )}
-
-      {session.user.user_metadata.admin && <ManageProducts />}
     </div>
   );
 }

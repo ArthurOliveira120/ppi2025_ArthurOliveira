@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
 
 import { ShoppingBasket, UserRound, Blocks } from "lucide-react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { ThemeToggle } from "./ThemeToggle";
@@ -26,15 +26,6 @@ export function Header() {
       </div>
 
       <div className={styles.container}>
-        {session && session.user.user_metadata.admin && (
-          <Link to="/manage-products" className={styles.link}>
-            <div className={styles.secContainer}>
-              <Blocks />
-              <p>Products</p>
-            </div>
-          </Link>
-        )}
-
         <ThemeToggle />
 
         <Link to="/cart" className={styles.link}>
